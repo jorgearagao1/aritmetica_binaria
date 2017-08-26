@@ -119,6 +119,7 @@ public class Janela extends javax.swing.JDialog {
             a = Character.getNumericValue(valor1.getText().charAt(i));
             b = Character.getNumericValue(valor2.getText().charAt(i));
             sun = (a+b+r);
+            r=0;
             if(sun==2){
                sun = 0;
                  r = 1;
@@ -129,11 +130,10 @@ public class Janela extends javax.swing.JDialog {
                 }
             saida.setText(Integer.toString(sun)+saida.getText());
             }
-            sun=0;
+            
             if (r!=0){
-     
-                sun = r+sun;
-                saida.setText(Integer.toString(sun)+saida.getText());
+                saida.setText(Integer.toString(r)+saida.getText());
+                r=0;
                 }
             
             
@@ -141,14 +141,16 @@ public class Janela extends javax.swing.JDialog {
             
             System.out.println("SOMA");
         } else {                                      //SUBTRAÇÃO
+            
              for(int i=valor1.getText().length()-1;i>=0;i--){
             a = Character.getNumericValue(valor1.getText().charAt(i));
             b = Character.getNumericValue(valor2.getText().charAt(i));
-            sun = (a-(b+r));
+            sun = a-(b+r);
+            r=0;
             if(sun<0){
                sun = 1;
                  r = 1;
-                }else{r=0;}
+                }
   
             saida.setText(Integer.toString(sun)+saida.getText());
             }
