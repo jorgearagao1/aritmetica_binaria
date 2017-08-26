@@ -148,7 +148,7 @@ public class Janela extends javax.swing.JDialog {
             if(sun<0){
                sun = 1;
                  r = 1;
-                }
+                }else{r=0;}
   
             saida.setText(Integer.toString(sun)+saida.getText());
             }
