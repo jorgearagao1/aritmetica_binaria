@@ -147,10 +147,14 @@ public class Janela extends javax.swing.JDialog {
             b = Character.getNumericValue(valor2.getText().charAt(i));
             sun = a-(b+r);
             r=0;
-            if(sun<0){
+            if(sun==(-1)){
                sun = 1;
                  r = 1;
                 }
+            if(sun==(-2)){ 
+               sun = 0;
+                r  = 1;
+             }
   
             saida.setText(Integer.toString(sun)+saida.getText());
             }
